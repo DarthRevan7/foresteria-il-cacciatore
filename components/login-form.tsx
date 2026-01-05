@@ -8,8 +8,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Mail, Lock, Eye, EyeOff } from "lucide-react"
+import { useAuth } from "@/lib/auth-context"
 
 export function LoginForm() {
+  const { login } = useAuth()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -30,16 +32,10 @@ export function LoginForm() {
     setIsSubmitting(true)
     setError("")
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const result = await login(formData.email, formData.password)
 
-    // Demo: Check for demo credentials
-    if (formData.email === "demo@ilcacciatore.it" && formData.password === "demo123") {
-      // Success - would redirect to dashboard
-      alert("Login effettuato con successo! (Demo)")
-      setFormData({ email: "", password: "" })
-    } else {
-      setError("Email o password non corretti")
+    if (!result.success) {
+      setError(result.error || "Errore durante il login")
     }
 
     setIsSubmitting(false)
@@ -120,11 +116,14 @@ export function LoginForm() {
             {isSubmitting ? "Accesso in corso..." : "Accedi"}
           </Button>
 
-          <div className="rounded-md bg-muted/50 p-3">
+          <div className="rounded-md bg-muted/50 p-3 space-y-2">
             <p className="text-xs text-muted-foreground">
-              <span className="font-semibold text-foreground">Demo:</span> Usa email{" "}
-              <code className="rounded bg-muted px-1 py-0.5">demo@ilcacciatore.it</code> e password{" "}
-              <code className="rounded bg-muted px-1 py-0.5">demo123</code>
+              <span className="font-semibold text-foreground">Admin:</span>{" "}
+              <code className="rounded bg-muted px-1 py-0.5">admin@foresteria.it</code> / demo123
+            </p>
+            <p className="text-xs text-muted-foreground">
+              <span className="font-semibold text-foreground">User:</span>{" "}
+              <code className="rounded bg-muted px-1 py-0.5">user@foresteria.it</code> / demo123
             </p>
           </div>
         </form>

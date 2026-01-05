@@ -11,7 +11,7 @@ export default function HomePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] overflow-hidden bg-primary/10">
+      <section className="relative h-[500px] sm:h-[600px] overflow-hidden bg-primary/10">
         <div className="absolute inset-0">
           <img
             src="/scenic-mountain-landscape-calabria-sila-forest-sun.jpg"
@@ -22,21 +22,25 @@ export default function HomePage() {
         </div>
 
         <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+          <h1 className="mb-4 sm:mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
             Foresteria <span className="text-primary">Il Cacciatore</span>
           </h1>
-          <p className="mb-8 max-w-2xl text-xl text-foreground/90 leading-relaxed text-balance">
+          <p className="mb-6 sm:mb-8 max-w-2xl text-lg sm:text-xl text-foreground/90 leading-relaxed text-balance px-2">
             La tua casa nel cuore della Calabria. Accoglienza autentica per cacciatori, cercatori di funghi e amanti
             della montagna.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Link href="/prenota">
-              <Button size="lg" className="text-lg px-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
+            <Link href="/prenota" className="w-full sm:w-auto">
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
                 Prenota Ora
               </Button>
             </Link>
-            <Link href="/noi">
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
+            <Link href="/noi" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base sm:text-lg px-6 sm:px-8 bg-transparent w-full sm:w-auto"
+              >
                 Scopri di Più
               </Button>
             </Link>
@@ -45,14 +49,16 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-4 text-center text-3xl font-bold text-foreground sm:text-4xl">Benvenuti a Castagna</h2>
-          <p className="mb-12 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="mb-3 sm:mb-4 text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
+            Benvenuti a Castagna
+          </h2>
+          <p className="mb-8 sm:mb-12 text-center text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Nel cuore della Calabria, a pochi passi dalla magnifica foresta della Sila
           </p>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <Card className="border-primary/20 transition-all hover:border-primary/40 hover:shadow-lg">
               <CardContent className="pt-6">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
@@ -94,11 +100,13 @@ export default function HomePage() {
       </section>
 
       {/* Activities Section */}
-      <section className="bg-muted/30 py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-muted/30 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-foreground sm:text-4xl">Attività nella Zona</h2>
+          <h2 className="mb-8 sm:mb-12 text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground">
+            Attività nella Zona
+          </h2>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
             <div className="flex gap-4 rounded-lg bg-card p-6 shadow-sm border border-border">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                 <Trees className="h-6 w-6 text-primary" />
@@ -152,16 +160,16 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-4xl text-balance">
+          <h2 className="mb-3 sm:mb-4 text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground text-balance">
             Pronto per la Tua Avventura?
           </h2>
-          <p className="mb-8 text-lg text-muted-foreground text-balance">
+          <p className="mb-6 sm:mb-8 text-base sm:text-lg text-muted-foreground text-balance px-2">
             Prenota il tuo soggiorno presso la Foresteria Il Cacciatore e scopri l'autentica ospitalità calabrese.
           </p>
-          <Link href="/prenota">
-            <Button size="lg" className="text-lg px-8">
+          <Link href="/prenota" className="inline-block w-full sm:w-auto px-4 sm:px-0">
+            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
               Prenota il Tuo Soggiorno
             </Button>
           </Link>
