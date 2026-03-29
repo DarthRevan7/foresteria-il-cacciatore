@@ -9,7 +9,7 @@ Benvenuti nella repository di **Foresteria Il Cacciatore**. Questo progetto è u
 
 ### 📖 Case Study Dettagliato
 Per una spiegazione approfondita delle scelte architettoniche, dei flussi UX e per vedere la galleria completa degli screenshot, visita il documento ufficiale qui:
-👉 **[Leggi il Case Study Completo]([[https://github.com/DarthRevan7/DarthRevan7/blob/main/IL-CACCIATORE.md](https://github.com/DarthRevan7/DarthRevan7/blob/main/IL-CACCIATORE.md)])**
+👉 **[Leggi il Case Study Completo](https://github.com/DarthRevan7/DarthRevan7/blob/main/IL-CACCIATORE.md)**
 
 ---
 
